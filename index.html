@@ -38,10 +38,10 @@
 
 <body class="font-poppins bg-cardBg">
     <!-- body main container -->
-    <div class="max-w-screen-lg mx-auto">
+    <div class="max-w-screen-xl mx-auto text-titleColor">
         <!-- header section -->
         <header>
-            <nav class="p-3 mt-4 bg-whiteColor rounded-xl">
+            <nav class="p-3 mt-3 bg-whiteColor rounded-xl">
                 <div class="flex items-center justify-between">
                     <!-- left nav -->
                     <div class="flex items-center cursor-pointer space-x-1">
@@ -51,18 +51,223 @@
                     <!-- right nav -->
                     <div class="flex items-center space-x-3">
                         <!-- count box -->
-                         <div class="flex items-center bg-cardBg px-3 py-2 rounded-xl">
+                        <div class="flex items-center bg-cardBg px-3 py-2 rounded-xl">
                             <img class="w-6 h-6" src="./assets/checkbox.png"">
-                            <h3 class="text-2xl font-bold ml-2">23</h3>
-                         </div>
-                         <!-- background color btn -->
-                          <div class="bg-cardBg p-2 rounded-full cursor-pointer">
+                            <h3 class=" text-2xl font-bold ml-2">23</h3>
+                        </div>
+                        <!-- background color btn -->
+                        <div class="bg-cardBg p-2 rounded-full cursor-pointer">
                             <img class="w-9 h-9" src="./assets/theme-btn.png" alt="">
-                          </div>
+                        </div>
                     </div>
                 </div>
             </nav>
         </header>
+        <!-- main section -->
+        <main>
+            <!-- main container -->
+            <div class="flex gap-3 my-3">
+                <!-- left section -->
+                <div class="w-3/4 bg-whiteColor rounded-xl">
+                    <!-- discover something section -->
+                    <div class="flex gap-5 p-5 pb-0">
+                        <!-- discover left -->
+                        <div class="w-1/4 bg-cardBg p-3 rounded-xl flex items-center gap-2">
+                            <div class="bg-whiteColor w-16 h-16 flex items-center justify-center rounded-full">
+                                <img class="w-7 h-7" src="./assets/checkbox.png" alt="checkbox">
+                            </div>
+                            <div>
+                                <p class="">Task Assigned</p>
+                                <h3 class="font-bold text-2xl">0<span>5</span></h3>
+                            </div>
+                        </div>
+                        <!-- discover middle -->
+                        <div
+                            class="w-2/4 bg-gradient-to-r from-primaryColor to-blue-300 rounded-xl px-8 py-4 flex items-center space-x-3 cursor-pointer">
+                            <img class="border-2 border-dashed w-14 h-14" src="./assets/board.png" alt="board image">
+                            <p class="text-whiteColor text-lg w-2/3">Discover Something New Today!</p>
+                        </div>
+                        <!-- discover right -->
+                        <div class="w-1/4 bg-cardBg p-3 rounded-xl flex items-center gap-2">
+                            <div class="bg-whiteColor w-14 h-14 flex items-center justify-center rounded-full">
+                                <img class="w-6 h-6" src="./assets/calender.png" alt="checkbox">
+                            </div>
+                            <div>
+                                <h3 class="">Wed,</h3>
+                                <p class="font-bold text-xl">Jul 28 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-dashed border-b-[1px] border-gray-300 pb-5"></div>
+
+                    <!-- gird box section -->
+                    <div class="grid grid-cols-3 gap-4 p-5">
+                        <!-- box 01 -->
+                        <div class="bg-cardBg p-5 rounded-xl">
+                            <button class="bg-whiteColor px-3 py-2 rounded-lg text-descriptionColor1">ShopEase</button>
+                            <h2 class="text-xl font-semibold my-2">Fix Mobile Button Issue </h2>
+                            <p class="text-sm text-descriptionColor2 bg-whiteColor p-3 rounded-xl">Debug using Chrome
+                                DevTools, check for overlapping elements, and ensure onClick works
+                                properly
+                                and ensure onClick works properly</p>
+                            <div class="border-dashed border-b-[1px] border-gray-300 pb-3"></div>
+                            <!-- deadline and completed btn box -->
+                            <div class="flex items-center justify-between">
+                                <!-- left -->
+                                <div class="mt-3">
+                                    <p class="text-sm text-descriptionColor2">Deadline</p>
+                                    <h4 class="font-semibold mt-1">21 March 2025</h4>
+                                </div>
+                                <!-- right -->
+                                <div>
+                                    <button id="completed-btn"
+                                        class="bg-primaryColor px-3 py-2 rounded-lg text-whiteColor hover:scale-105 duration-200 mt-3">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- box 02 -->
+                        <div class="bg-cardBg p-5 rounded-xl">
+                            <button class="bg-whiteColor px-3 py-2 rounded-lg text-descriptionColor1">CloudSync</button>
+                            <h2 class="text-xl font-semibold my-2">Add Dark Mode</h2>
+                            <p class="text-sm text-descriptionColor2 bg-whiteColor p-3 rounded-xl">Store the user's
+                                preference in localStorage, update CSS variables dynamically, and apply a smooth
+                                transition effect smooth transition effect.</p>
+                            <div class="border-dashed border-b-[1px] border-gray-300 pb-3"></div>
+                            <!-- deadline and completed btn box -->
+                            <div class="flex items-center justify-between">
+                                <!-- left -->
+                                <div class="mt-3">
+                                    <p class="text-sm text-descriptionColor2">Deadline</p>
+                                    <h4 class="font-semibold mt-1">21 March 2025</h4>
+                                </div>
+                                <!-- right -->
+                                <div>
+                                    <button id="completed-btn"
+                                        class="bg-primaryColor px-3 py-2 rounded-lg text-whiteColor hover:scale-105 duration-200 mt-3">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- box 03 -->
+                        <div class="bg-cardBg p-5 rounded-xl">
+                            <button class="bg-whiteColor px-3 py-2 rounded-lg text-descriptionColor1">SwiftPay</button>
+                            <h2 class="text-xl font-semibold my-2">Optimize Home page </h2>
+                            <p class="text-sm text-descriptionColor2 bg-whiteColor p-3 rounded-xl">Debug using Chrome
+                                DevTools, check for overlapping elements, and ensure onClick works
+                                properly
+                                and ensure onClick works properly</p>
+                            <div class="border-dashed border-b-[1px] border-gray-300 pb-3"></div>
+                            <!-- deadline and completed btn box -->
+                            <div class="flex items-center justify-between">
+                                <!-- left -->
+                                <div class="mt-3">
+                                    <p class="text-sm text-descriptionColor2">Deadline</p>
+                                    <h4 class="font-semibold mt-1">21 March 2025</h4>
+                                </div>
+                                <!-- right -->
+                                <div>
+                                    <button id="completed-btn"
+                                        class="bg-primaryColor px-3 py-2 rounded-lg text-whiteColor hover:scale-105 duration-200 mt-3">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- box 04 -->
+                        <div class="bg-cardBg p-5 rounded-xl">
+                            <button class="bg-whiteColor px-3 py-2 rounded-lg text-descriptionColor1">Meta</button>
+                            <h2 class="text-xl font-semibold my-2">Add new emoji 🤲</h2>
+                            <p class="text-sm text-descriptionColor2 bg-whiteColor p-3 rounded-xl">Debug using Chrome
+                                DevTools, check for overlapping elements, and ensure onClick works
+                                properly
+                                and ensure onClick works properly</p>
+                            <div class="border-dashed border-b-[1px] border-gray-300 pb-3"></div>
+                            <!-- deadline and completed btn box -->
+                            <div class="flex items-center justify-between">
+                                <!-- left -->
+                                <div class="mt-3">
+                                    <p class="text-sm text-descriptionColor2">Deadline</p>
+                                    <h4 class="font-semibold mt-1">21 March 2025</h4>
+                                </div>
+                                <!-- right -->
+                                <div>
+                                    <button id="completed-btn"
+                                        class="bg-primaryColor px-3 py-2 rounded-lg text-whiteColor hover:scale-105 duration-200 mt-3">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- box 05 -->
+                        <div class="bg-cardBg p-5 rounded-xl">
+                            <button class="bg-whiteColor px-3 py-2 rounded-lg text-descriptionColor1">Google LLC</button>
+                            <h2 class="text-xl font-semibold my-2">Integrate OpenAI API </h2>
+                            <p class="text-sm text-descriptionColor2 bg-whiteColor p-3 rounded-xl">Debug using Chrome
+                                DevTools, check for overlapping elements, and ensure onClick works
+                                properly
+                                and ensure onClick works properly</p>
+                            <div class="border-dashed border-b-[1px] border-gray-300 pb-3"></div>
+                            <!-- deadline and completed btn box -->
+                            <div class="flex items-center justify-between">
+                                <!-- left -->
+                                <div class="mt-3">
+                                    <p class="text-sm text-descriptionColor2">Deadline</p>
+                                    <h4 class="font-semibold mt-1">21 March 2025</h4>
+                                </div>
+                                <!-- right -->
+                                <div>
+                                    <button id="completed-btn"
+                                        class="bg-primaryColor px-3 py-2 rounded-lg text-whiteColor hover:scale-105 duration-200 mt-3">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- box 06 -->
+                        <div class="bg-cardBg p-5 rounded-xl">
+                            <button class="bg-whiteColor px-3 py-2 rounded-lg text-descriptionColor1">Glassdoar</button>
+                            <h2 class="text-xl font-semibold my-2">Improve Job searching</h2>
+                            <p class="text-sm text-descriptionColor2 bg-whiteColor p-3 rounded-xl">Debug using Chrome
+                                DevTools, check for overlapping elements, and ensure onClick works
+                                properly
+                                and ensure onClick works properly</p>
+                            <div class="border-dashed border-b-[1px] border-gray-300 pb-3"></div>
+                            <!-- deadline and completed btn box -->
+                            <div class="flex items-center justify-between">
+                                <!-- left -->
+                                <div class="mt-3">
+                                    <p class="text-sm text-descriptionColor2">Deadline</p>
+                                    <h4 class="font-semibold mt-1">21 March 2025</h4>
+                                </div>
+                                <!-- right -->
+                                <div>
+                                    <button id="completed-btn"
+                                        class="bg-primaryColor px-3 py-2 rounded-lg text-whiteColor hover:scale-105 duration-200 mt-3">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- right section Activity -->
+                <div class="w-1/4 bg-whiteColor rounded-xl">
+                    <!-- activity log box -->
+                    <div class="py-6 px-4">
+                        <div class="flex justify-center">
+                            <div class="flex items-center space-x-2">
+                                <img class="w-6 h-6" src="./assets/activity.png" alt="">
+                                <h3 class="font-semibold text-xl">Activity Log</h3>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <button
+                                class="bg-primaryColor px-3 py-2 rounded-lg text-whiteColor hover:scale-105 duration-200 mt-3">Clear
+                                History</button>
+                        </div>
+                    </div>
+                    <div class="border-dashed border-b-[1px] border-gray-300"></div>
+                    <!-- dynamic innerHTML section -->
+                    <div class="p-5">
+                        <p class="bg-cardBg p-2 rounded-lg text-center text-descriptionColor1 mb-3">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+                        <p class="bg-cardBg p-2 rounded-lg text-center text-descriptionColor1 mb-3">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
     </div>
 </body>
 
