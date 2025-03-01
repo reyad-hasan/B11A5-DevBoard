@@ -4,16 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover</title>
+    <!-- favicon link here -->
+    <link rel="shortcut icon" href="./assets/board.png" type="image/x-icon">
+    <title>DevBoard</title>
+    <!-- Poppins font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- tailwind cdn link here v-3.4.17 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind custom style here -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'whiteColor': '#FFFFFF',
+                        'primaryColor': '#3752FD',
+                        'titleColor': '#00303C',
+                        'descriptionColor1': '#315763',
+                        'descriptionColor2': '#7F7F7F',
+                        'cardBg': '#F4F7FF',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins, sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-    <header>
-        <button id="homePage">Home</button>
-    </header>
+<body class="font-poppins bg-cardBg text-titleColor">
+    <!-- main body container -->
+    <div class="max-w-screen-xl mx-auto text-titleColor">
+        <!-- header section -->
+        <header>
+            <nav class="px-3 py-5 mt-3 bg-whiteColor rounded-xl">
+                <div class="flex items-center justify-between">
+                    <!-- left nav -->
+                    <div id="homePage" class="flex items-center cursor-pointer space-x-1">
+                        <img class="w-10" src="./assets/logo.png" alt="logo image or photo">
+                        <h1 class="text-3xl font-bold"><span class="font-normal">Dev</span>Board</h1>
+                    </div>
+                    <!-- right nav -->
+                    <div class="flex items-center space-x-3">
+                        <!-- count box -->
+                        <button id="homePage2"
+                            class="bg-primaryColor px-3 py-2 rounded-md text-whiteColor hover:bg-blue-800 duration-200 cursor-pointe">Back
+                            to Desk</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
+        <!-- main section -->
+        <main>
+            <!-- Question-1: What are the different ways to select an element in the DOM? -->
+            <div class="bg-whiteColor mt-3 rounded-xl py-5 shadow-md">
+                <h1 class="px-5 font-semibold text-lg">Question-1: What are the different ways to select an element in
+                    the DOM?</h1>
+                <div class="border-dashed border-b-[1px] border-gray-300 my-2"></div>
+                <p class="px-5 text-descriptionColor2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Optio rerum quas voluptate facere! Ipsum corrupti expedita ea odio, natus sed mollitia eligendi,
+                    quaerat dignissimos recusandae voluptates magni! Dolor, quos quasi!</p>
+            </div>
+            <!-- Question-2: What is the difference between innerHTML, innerText, and textContent ? -->
+            <div class="bg-whiteColor mt-3 rounded-xl py-5 shadow-md">
+                <h1 class="px-5 font-semibold text-lg">Question-2: What is the difference between innerHTML, innerText,
+                    and textContent ?</h1>
+                <div class="border-dashed border-b-[1px] border-gray-300 my-2"></div>
+                <p class="px-5 text-descriptionColor2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Optio rerum quas voluptate facere! Ipsum corrupti expedita ea odio, natus sed mollitia eligendi,
+                    quaerat dignissimos recusandae voluptates magni! Dolor, quos quasi!</p>
+            </div>
+            <!-- Question-3: What is event delegation in the DOM? -->
+            <div class="bg-whiteColor mt-3 rounded-xl py-5 shadow-md">
+                <h1 class="px-5 font-semibold text-lg">Question-3: What is event delegation in the DOM?</h1>
+                <div class="border-dashed border-b-[1px] border-gray-300 my-2"></div>
+                <p class="px-5 text-descriptionColor2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Optio rerum quas voluptate facere! Ipsum corrupti expedita ea odio, natus sed mollitia eligendi,
+                    quaerat dignissimos recusandae voluptates magni! Dolor, quos quasi!</p>
+            </div>
+            <!-- Question-4: What is event bubbling in the DOM? -->
+            <div class="bg-whiteColor mt-3 rounded-xl py-5 shadow-md">
+                <h1 class="px-5 font-semibold text-lg">Question-4: What is event bubbling in the DOM?</h1>
+                <div class="border-dashed border-b-[1px] border-gray-300 my-2"></div>
+                <p class="px-5 text-descriptionColor2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Optio rerum quas voluptate facere! Ipsum corrupti expedita ea odio, natus sed mollitia eligendi,
+                    quaerat dignissimos recusandae voluptates magni! Dolor, quos quasi!</p>
+            </div>
+            <!-- Question-5: How do you create, add, and remove elements using JavaScript? -->
+            <div class="bg-whiteColor my-3 rounded-xl py-5 shadow-md">
+                <h1 class="px-5 font-semibold text-lg">Question-5: How do you create, add, and remove elements using
+                    JavaScript?</h1>
+                <div class="border-dashed border-b-[1px] border-gray-300 my-2"></div>
+                <p class="px-5 text-descriptionColor2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Optio rerum quas voluptate facere! Ipsum corrupti expedita ea odio, natus sed mollitia eligendi,
+                    quaerat dignissimos recusandae voluptates magni! Dolor, quos quasi!</p>
+            </div>
+        </main>
+    </div>
     <script>
         document.getElementById('homePage').addEventListener('click', function () {
+            window.location.href = 'index.html'
+        })
+        document.getElementById('homePage2').addEventListener('click', function () {
             window.location.href = 'index.html'
         })
     </script>
