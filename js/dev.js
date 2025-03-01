@@ -61,8 +61,8 @@ for (const btn of completedBtn) {
         // get time
         const time = new Date();
         let hours = time.getHours().toString().padStart(2, '0');
-        const minutes = time.getMinutes().toString().padStart(2, '0');
-        const seconds = time.getSeconds().toString().padStart(2, '0');
+        let minutes = time.getMinutes().toString().padStart(2, '0');
+        let seconds = time.getSeconds().toString().padStart(2, '0');
 
         let timeFormat = 'AM';
         if (hours >= 12) {
