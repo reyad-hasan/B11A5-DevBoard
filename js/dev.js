@@ -27,7 +27,7 @@ const allMonth = ["January", "February", "March", "April", "May", "June", "July"
 const month = allMonth[date.getMonth()];
 const toDayDate = date.getDate();
 const year = date.getFullYear();
-p.innerHTML= `${day},<span class="font-semibold"><br>${month} ${toDayDate} ${year}</span>`;
+p.innerHTML = `${day},<span class="font-semibold"><br>${month} ${toDayDate} ${year}</span>`;
 calenderContainer.appendChild(p);
 
 // completed-btn function
@@ -60,9 +60,9 @@ for (const btn of completedBtn) {
 
         // get time
         const time = new Date();
-        let hours = time.getHours();
-        const minutes = time.getMinutes();
-        const seconds = time.getSeconds();
+        let hours = time.getHours().toString().padStart(2, '0');
+        const minutes = time.getMinutes().toString().padStart(2, '0');
+        const seconds = time.getSeconds().toString().padStart(2, '0');
 
         let timeFormat = 'AM';
         if (hours >= 12) {
