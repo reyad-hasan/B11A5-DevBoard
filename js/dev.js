@@ -20,6 +20,8 @@ for (const completedBtn of completedBtns) {
     completedBtn.addEventListener('click', function (event) {
         alert('Board Update Successfully.');
 
+
+
         completedBtn.disabled = true;
         completedBtn.style.backgroundColor = 'gray-100';
 
@@ -28,6 +30,7 @@ for (const completedBtn of completedBtns) {
         if (taskAssignedValue > 0) {
             taskAssigned.innerText = taskAssignedValue - 1;
         };
+
 
         const navBarTaskCount = document.getElementById('navBarTaskCount');
         const navBarTaskCountValue = parseInt(navBarTaskCount.innerText);
@@ -51,9 +54,17 @@ for (const completedBtn of completedBtns) {
                 hours = 12;
             }
         };
-        p.innerText = `You have Complete The Task At This Time.${hours}:${minutes}:${seconds} ${timeFormat}`;
+
+        const parent = completedBtn.parentNode.parentNode.parentNode;
+        const children = parent.children[1];
+        const title = children.innerText;
+        p.innerHTML = `You have Complete The <br> <span class="text-primaryColor font-semibold">${title}</span><br> At This Time.${hours}:${minutes}:${seconds} ${timeFormat}`;
         p.classList.add('bg-cardBg', 'p-2', 'rounded-lg', 'text-center', 'text-descriptionColor1', 'mb-3')
         activityLogContainer.appendChild(p);
+
+        if (taskAssignedValue === 1) {
+            alert("Congrats!!! You Have Completed All Current Task.");
+        }
     })
 };
 
