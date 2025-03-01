@@ -8,22 +8,20 @@ function getRandomColor() {
     }
     return color;
 }
-
 bgChangeBtn.addEventListener('click', function () {
     document.body.style.backgroundColor = getRandomColor();
 });
 
+// go to discover page
+document.getElementById('discoverPage').addEventListener('click', function () {
+    window.location.href = 'discover.html';
+})
 
-// completed BTN all Function
-const completedBtns = document.querySelectorAll('#completed-btn');
-for (const completedBtn of completedBtns) {
-    completedBtn.addEventListener('click', function (event) {
+// completed-btn function
+const completedBtn = document.querySelectorAll('#completed-btn');
+for (const btn of completedBtn) {
+    btn.addEventListener('click', function () {
         alert('Board Update Successfully.');
-
-
-
-        completedBtn.disabled = true;
-        completedBtn.style.backgroundColor = 'gray-100';
 
         const taskAssigned = document.getElementById('taskAssigned');
         const taskAssignedValue = parseInt(taskAssigned.innerText);
@@ -31,48 +29,11 @@ for (const completedBtn of completedBtns) {
             taskAssigned.innerText = taskAssignedValue - 1;
         };
 
-
         const navBarTaskCount = document.getElementById('navBarTaskCount');
         const navBarTaskCountValue = parseInt(navBarTaskCount.innerText);
         if (navBarTaskCountValue > 0) {
             navBarTaskCount.innerText = navBarTaskCountValue + 1;
         };
-
-        const activityLogContainer = document.getElementById('activityLog');
-        const p = document.createElement('p');
-        let timeFormat = 'AM';
-        const time = new Date();
-        let hours = time.getHours().toString().padStart(2, '0');
-        const minutes = time.getMinutes().toString().padStart(2, '0');
-        const seconds = time.getSeconds().toString().padStart(2, '0');
-        if (hours >= 12) {
-            timeFormat = 'PM';
-            if (hours > 12) {
-                hours = hours - 12;
-            }
-            if (hours === 0) {
-                hours = 12;
-            }
-        };
-
-        const parent = completedBtn.parentNode.parentNode.parentNode;
-        const children = parent.children[1];
-        const title = children.innerText;
-        p.innerHTML = `You have Complete The <br> <span class="text-primaryColor font-semibold">${title}</span><br> At This Time.${hours}:${minutes}:${seconds} ${timeFormat}`;
-        p.classList.add('bg-cardBg', 'p-2', 'rounded-lg', 'text-center', 'text-descriptionColor1', 'mb-3')
-        activityLogContainer.appendChild(p);
-
-        if (taskAssignedValue === 1) {
-            alert("Congrats!!! You Have Completed All Current Task.");
-        }
     })
-};
-
-// Clear History Function
-const clearHistoryBtn = document.getElementById('clearHistoryBtn');
-clearHistoryBtn.addEventListener('click', function () {
-    const activityLogContainer = document.getElementById('activityLog');
-    alert('Do You Want To Clear History');
-    activityLogContainer.innerHTML = '';
-})
+}
 
